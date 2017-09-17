@@ -18,15 +18,15 @@
     <ion-list>
       <ion-item>
             <ion-label floating>E-Mail</ion-label>
-            <ion-input type="text" id="loginField" required [(ngModel)]="username" #email></ion-input>
+            <ion-input type="text" id="loginField" required [(ngModel)]="username" name="username" #email></ion-input>
       </ion-item>
       <ion-item>
             <ion-label floating>Password</ion-label>
-            <ion-input type="password" id="passField" required[(ngModel)]="password"></ion-input>
+            <ion-input type="password" id="passField" required [(ngModel)]="password" name="password"></ion-input>
       </ion-item>
     </ion-list>
+  <button ion-button color="secondary" type="submit" [disabled]="!loginForm.form.valid">Sign In</button>
   </form>
-  <button ion-button color="secondary">Sign In</button>
   <button ion-button color="light">Sign Up</button>
   <button ion-button icon-left><ion-icon name="facebook"></ion-icon> Connect with Facebook</button>
 </ion-content>

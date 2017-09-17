@@ -6,10 +6,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require('@angular/core');
+var time_1 = require('../pages/time/time');
 var home_1 = require('../pages/home/home');
 var MyApp = (function () {
-    function MyApp(platform, statusBar, splashScreen) {
+    function MyApp(platform, statusBar, splashScreen, oauth) {
         this.rootPage = home_1.HomePage;
+        if (oauth.hasValidIdToken()) {
+            this.rootPage = time_1.TimePage;
+        }
+        else {
+            this.rootPage = home_1.HomePage;
+        }
         platform.ready().then(function () {
             // Okay, so the platform is ready and our plugins are available.
             // Here you can do any higher level native things you might need.

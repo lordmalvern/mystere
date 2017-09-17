@@ -34,6 +34,7 @@ var AppModule = (function () {
             imports: [
                 platform_browser_1.BrowserModule,
                 http_1.HttpModule,
+                angular_oauth2_oidc_1.OAuthModule.forRoot(),
                 ionic_angular_1.IonicModule.forRoot(app_component_1.MyApp)
             ],
             bootstrap: [ionic_angular_1.IonicApp],
