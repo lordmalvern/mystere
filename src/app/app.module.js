@@ -12,6 +12,7 @@ var ionic_angular_1 = require('ionic-angular');
 var splash_screen_1 = require('@ionic-native/splash-screen');
 var status_bar_1 = require('@ionic-native/status-bar');
 var angular_oauth2_oidc_1 = require('angular-oauth2-oidc');
+var in_app_browser_1 = require('@ionic-native/in-app-browser');
 var app_component_1 = require('./app.component');
 var home_1 = require('../pages/home/home');
 var login_1 = require('../pages/login/login');
@@ -50,6 +51,7 @@ var AppModule = (function () {
                 angular_oauth2_oidc_1.OAuthService,
                 status_bar_1.StatusBar,
                 splash_screen_1.SplashScreen,
+                in_app_browser_1.InAppBrowser,
                 { provide: core_1.ErrorHandler, useClass: ionic_angular_1.IonicErrorHandler }
             ]
         })
